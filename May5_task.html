@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(244, 240, 255);
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color: black;
+        }
+        /* .container{
+            background-color: rgb(95, 0, 158);
+            padding: 30px;
+            width: 50%;
+            margin-left: 300px;
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .in1{
+            display: flex;
+            justify-content: center;
+           
+        }
+        .in2{
+            display: flex;
+            justify-content: center;  
+            margin-top: 30px;
+        }
+        label{
+            color: white;
+            font-size: 30px;
+            
+            margin-left: 20px;
+            padding-right: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="text"]{
+            width: 300px;
+            height: 45px;
+            border-radius: 30px;
+            border: 2px solid white;
+            padding-left: 50px;
+        }
+        input[type="email"]{
+            width: 300px;
+            height: 45px;
+            border-radius: 30px;
+            border: 2px solid white;
+            padding-left: 50px;
+        }
+
+    
+        input[type="number"]{
+            width: 300px;
+            height: 45px;
+            border-radius: 30px;
+            border: 2px solid white;
+            padding-left: 50px;
+        }
+
+        button{
+            height: 40px;
+            width: 200px;
+            border-radius: 30px;
+            color: black;
+            font-size: 20px;
+            border: 2px solid rgb(95, 0, 158);
+        }
+
+         */
+         form{
+            margin: 50px;
+            background-color: white;
+            padding-top: 20px;
+         }
+         .container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            place-items: center;
+         }
+         input{
+            outline: none;
+           border: 2px solid blueviolet;
+         }
+         input:focus{
+            
+            border: 2px solid green;
+         }
+         input[type="text"]{
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            
+           
+        }
+        input[type="email"]{
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+    
+        input[type="number"]{
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+           
+        }
+
+        .container2{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            place-items: center;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .container2 .in2{
+            
+            margin-left: 40px;
+            font-size: 15px;
+        }
+
+        .container2 input{
+            border: 2px solid blueviolet;
+            height: 30px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .container2 input:focus{
+            border: 2px solid rgb(67, 207, 20);
+            height: 30px;
+            border-radius: 5px;
+        }
+        select{
+            border-radius: 5px;
+            border: 2px solid blueviolet;
+        }
+        select:hover{
+            border-radius: 5px;
+            border: 2px solid rgb(0, 163, 22);
+        }
+        
+        textarea{
+            border: 2px solid blueviolet;
+        }
+        textarea:focus{
+            border: 2px solid rgb(28, 171, 0);
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+           gap: 1rem;
+           padding-bottom: 50px;
+        }
+        .btn button{
+            font-size: 25px;
+            border-radius: 5px;
+            padding: 10px;
+            border: 2px solid blueviolet;
+            color: white;
+            background-color: blueviolet;
+        }
+
+        @media only screen and (max-width: 600px) {
+            form{
+                margin:0px;
+                padding: 0px;
+                width: 620px;
+                font-size: 30px;
+            }
+            .container {
+              display: block;
+              align-items: center;
+              
+              margin: 0px;
+              padding: 0px;
+                    
+                }
+                .container2{
+                    display: block;
+                    
+                }
+            input{
+                 margin-left: 0px;
+                 font-size: 30px;
+            }
+            input[type="text"]{
+            width: 420px;
+            height: 50px;
+            border-radius: 5px;
+            
+           
+        }
+        input[type="email"]{
+            width: 420px;
+            height: 50px;
+            border-radius: 5px;
+        }
+
+    
+        input[type="number"]{
+            width: 420px;
+            height: 50px;
+            border-radius: 5px;
+           
+        }
+        .container2 .in2{
+            font-size: 30px;
+        }
+        .container2 input{
+            font-size: 30px;
+            padding: 5px;
+        }
+        .container2 select{
+            font-size: 25px;
+            
+        }
+        .container2 label{
+            font-size: 30px;
+        }
+
+        .container2 input[type="checkbox"] {
+      transform: scale(2); /* Increase the size */
+         /* Optional: space between checkbox and label */
+         margin-right: 15px;
+    }
+    .container2 .msg{
+       
+        display: flex;
+        flex-direction: column;
+        column-width: 400px;
+
+    }
+    textarea{
+        width: 400px;
+        font-size: 25px;
+        margin: 0px;
+        padding-left: 50px;
+    }
+    }
+    </style>
+</head>
+<body>
+    <!-- Creating a form -->
+     <form action="">
+        <h2 style="text-align: center;">Registration Form</h2>
+        <hr>
+        <h3 style="text-align: center;">Write your Details here</h3>
+        <div class="container">
+        
+        <div class="in2">
+        <label for="name">Name </label>
+        <input type="text" name="" id="name" placeholder="Type your Name" required><br><br><br>
+        </div>
+        <div class="in2">
+        <label for="">Age</label>
+        <input type="number" name="" id="" placeholder="Type your Age" required><br><br><br>
+        </div>
+
+
+        <div class="in2">
+        <label for="">Phone</label>
+        <input type="number" name="" id="" placeholder="Type your Phone" required><br><br><br>
+            </div>
+            <div class="in2">
+        <label for="">Email</label>
+        <input type="email" name="" id="" placeholder="Type Your Email" required><br><br><br>
+        </div>   
+    </div>
+    <hr>
+        <h3 style="text-align: center;">Choose your details here</h3>
+        <div class="container2">
+        
+        <div class="in2">
+        <label for="">DOB</label>
+        <input type="datetime-local" name="" id="" placeholder="Type Your Email" 
+       
+        required><br><br><br>
+        </div>
+        <div class="in2">
+            
+            <span> Choose your Gender</span>
+            <div style="display: flex;justify-content: left;">
+            <input type="checkbox"><label style="margin-top: 7px;">Male</label>
+            </div>
+                <div style="display: flex;justify-content: left;">
+                <input type="checkbox"><label style="margin-top: 7px;">Female</label>
+                </div>
+                <div style="display: flex;justify-content: left;">
+                    <input type="checkbox"><label style="margin-top: 7px;">Transgender</label>
+                </div>
+            
+        <br><br><br>
+
+        </div>
+
+        <div class="in2">
+        <label for="">Qualification</label>
+        <select name="" id="" style="height: 40px;border-radius: 30px;padding: 10px;">
+            <option value="">BBA</option>
+            <option value="">BCA</option>
+            <option value="">BA</option>
+            <option value="">BCOM</option>
+        </select><br><br><br>
+
+        </div>
+
+        <div class="in2" >
+        <label for="">Skills</label>
+        <select name="" id="" multiple style="height: 40px;padding: 10px;">
+            <option value="">Html</option>
+            <option value="">CSS</option>
+            <option value="">JavaScript</option>
+            <option value="">React js</option>
+        </select>
+        <br><br><br>
+
+        </div>
+
+
+        <div class="in2">
+            I have
+            <div style="display: flex;justify-content: left;">
+            <input type="checkbox"><label style="margin-top: 7px;">Cycle</label>
+            </div>
+            <div style="display: flex;justify-content: left;">
+            <input type="checkbox"><label style="margin-top: 7px;">Bike</label>
+            </div>
+            <div style="display: flex;justify-content: left;">
+            <input type="checkbox"><label style="margin-top: 7px;">Car</label>
+        </div>
+
+        <br><br><br>
+
+        </div>
+
+
+        <div class="in2" >
+        <label for="">Choose City Name</label>
+        <select name="" id="" style="height: 40px;padding: 10px;">
+            <option value="">Kolkata</option>
+            <option value="">Pune</option>
+            <option value="">Delhi</option>
+            <option value="">Hydrabad</option>
+        </select><br><br><br>
+        </div>
+
+       
+        <div class="in2">
+        <label for="">Upload Profile Picture</label>
+        <input type="file" name="" id="">
+        <br><br><br>
+        </div>
+
+        <div class="in2 msg">
+            <label for="">Message</label>
+            <textarea name="" id="" placeholder="Type your Feedback" style="height: 100px;border-radius: 5px;outline: none;"></textarea>
+            <br><br><br>
+            </div>
+        </div>
+
+       
+
+        
+        <div class="btn">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+        </div>
+
+     </form>
+</body>
+</html>
